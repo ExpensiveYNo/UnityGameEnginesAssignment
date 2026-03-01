@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Open_Close_Animation : MonoBehaviour
 {
     private Animator mAnimator;
+
+    public AudioClip moveSound;
 
     // Start is called before the first frame update void Start()
     void Start()
@@ -16,12 +19,14 @@ public class Open_Close_Animation : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.O))
             {
                 mAnimator.SetTrigger("TriOpen");
+                AudioSource.PlayClipAtPoint(moveSound, transform.position);
             }
 
         if (mAnimator != null)
             if (Input.GetKeyDown(KeyCode.C))
             {
                 mAnimator.SetTrigger("TriClose");
+                AudioSource.PlayClipAtPoint(moveSound, transform.position);
             }
 
     }

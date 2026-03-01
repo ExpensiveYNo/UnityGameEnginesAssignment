@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|c:\\users\\figue\\unitygameenginesassignment\\unityenviormentassignmentmaxs\\assets\\door2movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\door2movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|c:\\users\\figue\\unitygameenginesassignment\\unityenviormentassignmentmaxs\\assets\\open_close_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\open_close_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\assets\\simplecollectiblespack\\simplecollectiblescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\simplecollectiblespack\\simplecollectiblescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|c:\\users\\figue\\unitygameenginesassignment\\unityenviormentassignmentmaxs\\assets\\keyhubscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\assets\\keyhubscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\keyhubscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|c:\\users\\figue\\unitygameenginesassignment\\unityenviormentassignmentmaxs\\assets\\coinscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\assets\\coinscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\coinscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\assets\\open_close_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\open_close_animation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +30,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "Door2Movement.cs",
+              "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Door2Movement.cs",
+              "RelativeDocumentMoniker": "Assets\\Door2Movement.cs",
+              "ToolTip": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Door2Movement.cs",
+              "RelativeToolTip": "Assets\\Door2Movement.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAqwCsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T02:41:02.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Open_Close_Animation.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Open_Close_Animation.cs",
               "RelativeDocumentMoniker": "Assets\\Open_Close_Animation.cs",
               "ToolTip": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Open_Close_Animation.cs",
               "RelativeToolTip": "Assets\\Open_Close_Animation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-27T19:09:47.098Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SimpleCollectibleScript.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
               "RelativeDocumentMoniker": "Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
               "ToolTip": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
               "RelativeToolTip": "Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAcwD4AAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T18:28:51.754Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T18:28:51.754Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CoinScore.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\CoinScore.cs",
               "RelativeDocumentMoniker": "Assets\\CoinScore.cs",
@@ -64,12 +80,11 @@
               "RelativeToolTip": "Assets\\CoinScore.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T18:07:42.671Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T18:07:42.671Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "KeyHubScript.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\KeyHubScript.cs",
               "RelativeDocumentMoniker": "Assets\\KeyHubScript.cs",
@@ -77,8 +92,7 @@
               "RelativeToolTip": "Assets\\KeyHubScript.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-27T19:45:17.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-27T19:45:17.446Z"
             }
           ]
         }
