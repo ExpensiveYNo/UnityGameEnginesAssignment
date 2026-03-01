@@ -17,13 +17,15 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	public GameObject collectEffect;
 
+	public bool flag = false;
+
 	// Use this for initialization
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 
 		if (rotate)
 			transform.Rotate (Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
@@ -62,7 +64,7 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
             KeyHubScript.instance.AddPoint();
 
-            Debug.Log ("Do NoType Command");
+			Debug.Log ("Do NoType Command");
 		}
 		if (CollectibleType == CollectibleTypes.Type3) {
 
