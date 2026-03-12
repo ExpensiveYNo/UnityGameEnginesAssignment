@@ -65,6 +65,7 @@
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
     <Compile Include="Assets\Final Prefab\CoinScore.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
+    <Compile Include="Assets\Final Prefab\MainMenuScript.cs" />
     <Compile Include="Assets\Locker_HQ\Scripts\CameraFreeflight.cs" />
     <Compile Include="Assets\SimpleCollectiblesPack\SimpleCollectibleScript.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
