@@ -63,21 +63,26 @@
   <ItemGroup>
     <Compile Include="Assets\Final Prefab\Open_Close_Animation.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
+    <Compile Include="Assets\Final Prefab\PlayerMovementCC.cs" />
     <Compile Include="Assets\Final Prefab\CoinScore.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\Final Prefab\MainMenuScript.cs" />
     <Compile Include="Assets\Locker_HQ\Scripts\CameraFreeflight.cs" />
     <Compile Include="Assets\SimpleCollectiblesPack\SimpleCollectibleScript.cs" />
+    <Compile Include="Assets\Final Prefab\EnemyAI.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Final Prefab\RaycastShooter.cs" />
     <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
+    <Compile Include="Assets\Final Prefab\Health.cs" />
     <Compile Include="Assets\BTM_Assets\BTM_Items_Gems\Scripts\SimpleGemsAnim.cs" />
     <Compile Include="Assets\Final Prefab\ProximityLightController.cs" />
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
     <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\MouseLook.cs" />
     <Compile Include="Assets\Final Prefab\key_pickup.cs" />
+    <Compile Include="Assets\Final Prefab\CameraControllerFPS.cs" />
     <Compile Include="Assets\Polytope Studio\Lowpoly_Demos\Environment_Free\Helpers\PlayerMovement.cs" />
     <Compile Include="Assets\Final Prefab\Door2Movement.cs" />
     <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
@@ -1207,10 +1212,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Recorder.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.2D.Editor.Overrides">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.2D.Editor.Overrides.dll</HintPath>
       <Private>False</Private>
@@ -1259,10 +1260,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.Bindings.OpenImageIO.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Recorder.Base">
-      <HintPath>Library\ScriptAssemblies\Unity.Recorder.Base.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.VisualScripting.Core">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
       <Private>False</Private>
@@ -1285,10 +1282,6 @@
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Recorder">
-      <HintPath>Library\ScriptAssemblies\Unity.Recorder.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
@@ -1405,6 +1398,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.Recorder.Editor.csproj">
+      <Project>{779C418D-385F-1068-FB33-08888E0E329D}</Project>
+      <Name>Unity.Recorder.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.Base.csproj">
+      <Project>{31D15710-02C5-9902-0FB4-7265443DBC54}</Project>
+      <Name>Unity.Recorder.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Recorder.csproj">
+      <Project>{0B169249-B5C1-4C42-0756-D5B9D098CFBE}</Project>
+      <Name>Unity.Recorder</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -57,6 +57,7 @@ public class RaycastShooter : MonoBehaviour
         }
     }
 
+
     void Shoot()
     {
         if (muzzleFlash != null)

@@ -5,6 +5,8 @@ public class PlayerMovementCC : MonoBehaviour
     public float speed = 5f;
     public float jump = 2f;
     public float gravity = -9.81f;
+    public int maxJumps = 1;
+    public bool grounded = false;
 
     private CharacterController cc;
     private Vector3 velocity;
@@ -25,12 +27,28 @@ public class PlayerMovementCC : MonoBehaviour
             velocity.y = -2f;
         }
 
-        if (Input.GetButtonDown("Jump") && cc.isGrounded)
+        
+
+        if (Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = Mathf.Sqrt(jump * -2f * gravity);
+            maxJumps--;
         }
+
+      
 
         velocity.y += gravity * Time.deltaTime;
         cc.Move(velocity * Time.deltaTime);
+    }
+
+    void OnCollisionStay(Collision collision)
+    {
+        if (collision.contacts[0].normal.y > 0.5f)
+            grounded = true;
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        grounded = false;
     }
 }

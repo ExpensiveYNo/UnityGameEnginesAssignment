@@ -3,7 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|c:\\users\\figue\\unitygameenginesassignment\\unityenviormentassignmentmaxs\\assets\\final prefab\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|c:\\users\\figue\\unitygameenginesassignment\\unityenviormentassignmentmaxs\\assets\\final prefab\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\final prefab\\enemyai.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\assets\\final prefab\\raycastshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\final prefab\\raycastshooter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|c:\\users\\figue\\unitygameenginesassignment\\unityenviormentassignmentmaxs\\assets\\final prefab\\playermovementcc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\final prefab\\playermovementcc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\assets\\final prefab\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\final prefab\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\assets\\final prefab\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03D8A047-98F3-2CCF-2236-E324D6D57E04}|Assembly-CSharp.csproj|solutionrelative:assets\\final prefab\\mainmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,6 +59,58 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "EnemyAI.cs",
+              "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\EnemyAI.cs",
+              "RelativeDocumentMoniker": "Assets\\Final Prefab\\EnemyAI.cs",
+              "ToolTip": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\EnemyAI.cs",
+              "RelativeToolTip": "Assets\\Final Prefab\\EnemyAI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:27:46.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerMovementCC.cs",
+              "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\PlayerMovementCC.cs",
+              "RelativeDocumentMoniker": "Assets\\Final Prefab\\PlayerMovementCC.cs",
+              "ToolTip": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\PlayerMovementCC.cs",
+              "RelativeToolTip": "Assets\\Final Prefab\\PlayerMovementCC.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA1wDEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:16:36.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Health.cs",
+              "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Final Prefab\\Health.cs",
+              "ToolTip": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\Health.cs",
+              "RelativeToolTip": "Assets\\Final Prefab\\Health.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:15:54.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RaycastShooter.cs",
+              "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\RaycastShooter.cs",
+              "RelativeDocumentMoniker": "Assets\\Final Prefab\\RaycastShooter.cs",
+              "ToolTip": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\RaycastShooter.cs",
+              "RelativeToolTip": "Assets\\Final Prefab\\RaycastShooter.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAAwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T23:09:34.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainMenuScript.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Final Prefab\\MainMenuScript.cs",
               "RelativeDocumentMoniker": "Assets\\Final Prefab\\MainMenuScript.cs",
@@ -55,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "key_pickup.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\key_pickup.cs",
               "RelativeDocumentMoniker": "Assets\\key_pickup.cs",
@@ -66,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Open_Close_Animation.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Open_Close_Animation.cs",
               "RelativeDocumentMoniker": "Assets\\Open_Close_Animation.cs",
@@ -78,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "SimpleCollectibleScript.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
               "RelativeDocumentMoniker": "Assets\\SimpleCollectiblesPack\\SimpleCollectibleScript.cs",
@@ -90,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Door2Movement.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\Door2Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Door2Movement.cs",
@@ -102,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "CoinScore.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\CoinScore.cs",
               "RelativeDocumentMoniker": "Assets\\CoinScore.cs",
@@ -114,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "KeyHubScript.cs",
               "DocumentMoniker": "C:\\Users\\figue\\UnityGameEnginesAssignment\\UnityEnviormentAssignmentMaxS\\Assets\\KeyHubScript.cs",
               "RelativeDocumentMoniker": "Assets\\KeyHubScript.cs",
