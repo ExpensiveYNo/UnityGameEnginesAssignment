@@ -5,9 +5,7 @@ public class PlayerMovementCC : MonoBehaviour
     public float speed = 5f;
     public float jump = 2f;
     public float gravity = -9.81f;
-    public int maxJumps = 1;
-    public bool grounded = false;
-
+  
     private CharacterController cc;
     private Vector3 velocity;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -29,10 +27,9 @@ public class PlayerMovementCC : MonoBehaviour
 
         
 
-        if (Input.GetButtonDown("Jump") && grounded)
-        {
+        if (Input.GetButtonDown("Jump") && cc.isGrounded)
+        { 
             velocity.y = Mathf.Sqrt(jump * -2f * gravity);
-            maxJumps--;
         }
 
       
@@ -41,14 +38,4 @@ public class PlayerMovementCC : MonoBehaviour
         cc.Move(velocity * Time.deltaTime);
     }
 
-    void OnCollisionStay(Collision collision)
-    {
-        if (collision.contacts[0].normal.y > 0.5f)
-            grounded = true;
-    }
-
-    void OnCollisionExit(Collision collision)
-    {
-        grounded = false;
-    }
 }
