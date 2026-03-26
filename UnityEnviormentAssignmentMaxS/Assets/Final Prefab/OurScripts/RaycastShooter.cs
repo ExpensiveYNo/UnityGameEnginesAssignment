@@ -3,27 +3,37 @@ using System.Collections;
 
 public class RaycastShooter : MonoBehaviour
 {
+    public static RaycastShooter instance;
+
     [Header("Shooting Settings")]
-    public float fireRate = 0.2f;         // Time between shots (seconds)
-    public float range = 100f;            // Max raycast distance
-    public int damage = 25;               // Damage dealt per hit
-    public LayerMask hitLayers;           // Which layers can be hit
+    public float fireRate = 0.2f;
+    public float range = 100f;
+    public int damage = 25;
+    public int maxAmmo = 30;
+    public LayerMask hitLayers;
 
     [Header("Effects")]
-    public ParticleSystem muzzleFlash;    // Optional muzzle flash effect
-    public GameObject impactEffectPrefab; // Optional hit effect prefab
+    public ParticleSystem muzzleFlash;
+    public GameObject impactEffectPrefab;
 
     [Header("Tracer Settings")]
-    public Transform muzzlePoint;         // Where the tracer starts (e.g. gun barrel tip)
-    public float tracerDuration = 0.05f;  // How long the tracer line stays visible
-    public float tracerWidth = 0.02f;     // Thickness of the tracer line
-    public Color tracerColor = new Color(1f, 0.9f, 0.3f); //Color of the tracer
+    public Transform muzzlePoint;
+    public float tracerDuration = 0.05f;
+    public float tracerWidth = 0.02f;
+    public Color tracerColor = new Color(1f, 0.9f, 0.3f);
 
     [Header("References")]
-    public Camera playerCamera;           // Camera to shoot from
+    public Camera playerCamera;
 
+    private int currentAmmo;
     private float nextFireTime = 0f;
     private LineRenderer lineRenderer;
+
+    void Awake()
+    {
+        instance = this;
+        currentAmmo = maxAmmo;
+    }
 
     void Start()
     {
@@ -38,25 +48,30 @@ public class RaycastShooter : MonoBehaviour
         lineRenderer = gameObject.AddComponent<LineRenderer>();
         lineRenderer.positionCount = 2;
         lineRenderer.startWidth = tracerWidth;
-        lineRenderer.endWidth = tracerWidth * 0.5f; // Slightly tapered at the end
+        lineRenderer.endWidth = tracerWidth * 0.5f;
         lineRenderer.useWorldSpace = true;
         lineRenderer.enabled = false;
-
-        // Create a simple unlit material so the tracer glows without needing lighting
         lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startColor = tracerColor;
-        lineRenderer.endColor = new Color(tracerColor.r, tracerColor.g, tracerColor.b, 0f); // Fade to transparent
+        lineRenderer.endColor = new Color(tracerColor.r, tracerColor.g, tracerColor.b, 0f);
     }
 
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time >= nextFireTime)
+        if (Input.GetButton("Fire1") && Time.time >= nextFireTime && currentAmmo > 0)
         {
             nextFireTime = Time.time + fireRate;
+            currentAmmo--;
             Shoot();
         }
     }
 
+    // Called by ammo collectibles 
+    public void RefillAmmo(int amount = -1)
+    {
+        currentAmmo = (amount < 0) ? maxAmmo : Mathf.Min(currentAmmo + amount, maxAmmo);
+        Debug.Log($"Ammo refilled! Current ammo: {currentAmmo}/{maxAmmo}");
+    }
 
     void Shoot()
     {
@@ -64,17 +79,13 @@ public class RaycastShooter : MonoBehaviour
             muzzleFlash.Play();
 
         Ray ray = playerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-
-        // Start point: muzzle point if assigned, otherwise camera position
         Vector3 startPoint = muzzlePoint != null ? muzzlePoint.position : playerCamera.transform.position;
 
-        // End point: where the ray hits, or max range if it hits nothing
         Vector3 endPoint;
         if (Physics.Raycast(ray, out RaycastHit hit, range, hitLayers))
         {
             endPoint = hit.point;
-
-            Debug.Log($"Hit: {hit.collider.name} at {hit.point}");
+            //Debug.Log($"Hit: {hit.collider.name} at {hit.point}");
 
             Health health = hit.collider.GetComponent<Health>();
             if (health != null)
@@ -88,7 +99,6 @@ public class RaycastShooter : MonoBehaviour
         }
         else
         {
-            // No hit — tracer travels to max range
             endPoint = ray.origin + ray.direction * range;
         }
 
@@ -101,7 +111,6 @@ public class RaycastShooter : MonoBehaviour
         lineRenderer.SetPosition(0, start);
         lineRenderer.SetPosition(1, end);
 
-        // Fade out over the tracer duration
         float elapsed = 0f;
         while (elapsed < tracerDuration)
         {
