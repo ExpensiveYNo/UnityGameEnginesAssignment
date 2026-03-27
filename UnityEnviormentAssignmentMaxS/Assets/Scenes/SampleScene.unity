@@ -4216,7 +4216,7 @@ MonoBehaviour:
   maxSpawnInterval: 15
   spawnRadius: 55
   navMeshSampleDistance: 5
-  spawnHeightOffset: 1
+  spawnHeightOffset: 0.7
   spawnCenter: {fileID: 0}
 --- !u!4 &1868021368
 Transform:
