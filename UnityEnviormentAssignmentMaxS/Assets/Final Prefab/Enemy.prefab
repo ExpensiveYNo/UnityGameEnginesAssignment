@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 1573599550818296042}
   - component: {fileID: 4527504012890410697}
   - component: {fileID: 6226676728324933929}
+  - component: {fileID: 4359263657909281091}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -134,12 +135,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   maxHealth: 100
+  iFrameDuration: 1.5
   onDeath:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6226676728324933929}
         m_TargetAssemblyTypeName: LootDrop, Assembly-CSharp
         m_MethodName: Drop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onHit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4359263657909281091}
+        m_TargetAssemblyTypeName: hitFlash, Assembly-CSharp
+        m_MethodName: Flash
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -263,6 +283,20 @@ MonoBehaviour:
   - prefab: {fileID: 3497553152194850393, guid: dd5b992862e8bba4faba01893d3e178d, type: 3}
     chance: 0.2
   dropHeightOffset: 0.5
+--- !u!114 &4359263657909281091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6094909205863143164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c92b56c84befb64facf6057083fcd98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::hitFlash
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
+  flashDuration: 0.1
 --- !u!1 &7157857238349091038
 GameObject:
   m_ObjectHideFlags: 0

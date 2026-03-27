@@ -9,14 +9,14 @@ public class EnemyBullet : MonoBehaviour
 
     private void Awake()
     {
-        bulletCollider = GetComponent<Collider>();
+        //bulletCollider = GetComponent<Collider>();
 
-        // Temporarily disable the collider to avoid spawning inside the enemy
-        if (bulletCollider != null)
-        {
-            bulletCollider.enabled = false;
-            Invoke(nameof(EnableCollider), safeDelay);
-        }
+        //// Temporarily disable the collider to avoid spawning inside the enemy
+        //if (bulletCollider != null)
+        //{
+        //    bulletCollider.enabled = false;
+        //    Invoke(nameof(EnableCollider), safeDelay);
+        //}
     }
 
     private void EnableCollider()
@@ -32,7 +32,10 @@ public class EnemyBullet : MonoBehaviour
         {
             Health playerHealth = collision.collider.GetComponent<Health>();
             if (playerHealth != null)
+            {
+                Destroy(gameObject);
                 playerHealth.TakeDamage(damage);
+            }
         }
 
         // Destroy the bullet after hitting anything

@@ -9,4 +9,14 @@ public class UIManager : MonoBehaviour
         deathPanel.SetActive(!deathPanel.activeSelf);
     }
 
+    // Wire these up to your Respawn and Main Menu buttons in the Inspector
+    public void OnRespawnPressed()
+    {
+        LevelManager.instance.Respawn();
+    }
+
+    public void OnMainMenuPressed()
+    {
+        LevelManager.instance.GoToMainMenu();
+    }
 }
