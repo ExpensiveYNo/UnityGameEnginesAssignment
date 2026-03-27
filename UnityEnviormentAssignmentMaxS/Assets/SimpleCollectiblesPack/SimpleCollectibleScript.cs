@@ -58,7 +58,8 @@ public class SimpleCollectibleScript : MonoBehaviour
         }
         else if (CollectibleType == CollectibleTypes.Type4)
         {
-            Debug.Log("Do Type4 Command");
+            for (int i = 0; i < 5; i++)
+                CoinScore.instance.AddPoint();
         }
         else if (CollectibleType == CollectibleTypes.Type5)
         {

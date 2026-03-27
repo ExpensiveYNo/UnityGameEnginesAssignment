@@ -18,13 +18,13 @@ public class CoinScore : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        coinScore.text = coin.ToString() + " Coins";   
+        coinScore.text = "Score: " + coin.ToString();
     }
 
     // Update is called once per frame
     public void AddPoint()
     {
         coin += 1;
-        coinScore.text = coin.ToString() + " Coins";
+        coinScore.text = "Score: " + coin.ToString();
     }
 }
