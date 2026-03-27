@@ -5,37 +5,43 @@ public class PlayerMovementCC : MonoBehaviour
     public float speed = 5f;
     public float jump = 2f;
     public float gravity = -9.81f;
-  
+
     private CharacterController cc;
     private Vector3 velocity;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private bool canJump; // tracks if player can jump
+
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        canJump = true; // start able to jump
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 move = transform.right * Input.GetAxis("Horizontal") + transform.forward * Input.GetAxis("Vertical");
-        cc.Move(move * speed * Time.deltaTime);
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
-        if (cc.isGrounded && velocity.y < 0)
+        Vector3 move = transform.right * x + transform.forward * z;
+
+        // Jump only if allowed and grounded
+        if (Input.GetButtonDown("Jump") && cc.isGrounded && canJump)
         {
-            velocity.y = -2f;
-        }
-
-        
-
-        if (Input.GetButtonDown("Jump") && cc.isGrounded)
-        { 
             velocity.y = Mathf.Sqrt(jump * -2f * gravity);
+            canJump = false; // prevent double jump
         }
 
-      
+        // Reset jump when touching the ground
+        if (cc.isGrounded && velocity.y <= 0)
+        {
+            canJump = true;
+            velocity.y = -2f; // stick to ground
+        }
 
+        // Apply gravity
         velocity.y += gravity * Time.deltaTime;
-        cc.Move(velocity * Time.deltaTime);
-    }
 
+        // Final movement
+        Vector3 finalMove = move * speed + velocity;
+        cc.Move(finalMove * Time.deltaTime);
+    }
 }

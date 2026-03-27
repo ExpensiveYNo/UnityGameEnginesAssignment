@@ -974,8 +974,6 @@ MonoBehaviour:
   speed: 5
   jump: 2
   gravity: -9.81
-  maxJumps: 1
-  grounded: 0
 --- !u!143 &943170207
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1018,7 +1016,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -1090,7 +1088,7 @@ Transform:
   m_GameObject: {fileID: 943170205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 856.41, y: 86.615, z: 456.55}
+  m_LocalPosition: {x: 856.41, y: 86.591, z: 456.55}
   m_LocalScale: {x: 1, y: 0.9984168, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1160,6 +1158,9 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &977208886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,8 +1173,6 @@ GameObject:
   - component: {fileID: 977208890}
   - component: {fileID: 977208889}
   - component: {fileID: 977208888}
-  - component: {fileID: 977208892}
-  - component: {fileID: 977208891}
   m_Layer: 3
   m_Name: Gun
   m_TagString: Untagged
@@ -1275,30 +1274,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 977208886}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &977208891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977208886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e466aecf4de15546b2466dc22a5e7e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Gun
---- !u!114 &977208892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 977208886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8d98f47e6d17140a2337e5eb15712a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ShootRayCast
 --- !u!1001 &1031955106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1874,7 +1849,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1308563873360753919, guid: 462844e2b1ac66044951f35001c36a7d, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4425008859306532198, guid: 462844e2b1ac66044951f35001c36a7d, type: 3}
       propertyPath: m_Name

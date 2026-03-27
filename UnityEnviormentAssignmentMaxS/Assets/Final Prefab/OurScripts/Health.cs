@@ -7,19 +7,27 @@ public class Health : MonoBehaviour
     public int maxHealth = 100;
 
     [Header("Events")]
-    public UnityEvent onDeath;  //Hook up death events in the inspector
+    public UnityEvent onDeath;           // Hook up death events in inspector
+    public UnityEvent onHealthChanged;   // Invoked whenever health changes
 
     private int currentHealth;
+
+    // Public read-only property to access current health
+    public int CurrentHealth => currentHealth;
 
     void Start()
     {
         currentHealth = maxHealth;
+        onHealthChanged?.Invoke(); // Initialize UI or other listeners
     }
 
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
-        //Debug.Log($"{gameObject.name} took {amount} damage. HP: {currentHealth}/{maxHealth}"); //Debug log for testing
+        currentHealth = Mathf.Max(currentHealth, 0); // Clamp to 0
+
+        // Notify listeners that health changed
+        onHealthChanged?.Invoke();
 
         if (currentHealth <= 0)
             Die();
@@ -27,7 +35,6 @@ public class Health : MonoBehaviour
 
     void Die()
     {
-        //Debug.Log($"{gameObject.name} died."); //Debug log for testing
         onDeath?.Invoke();
         Destroy(gameObject);
     }
