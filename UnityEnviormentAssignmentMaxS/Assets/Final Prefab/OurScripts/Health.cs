@@ -45,6 +45,14 @@ public class Health : MonoBehaviour
     {
         Debug.Log($"{gameObject.name} died.");
         onDeath?.Invoke();
-        Destroy(gameObject);
+        PlayerDied();
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void PlayerDied()
+    {
+        LevelManager.instance.GameOver();
+        gameObject.SetActive(false);
     }
 }
