@@ -30,7 +30,7 @@ public class key_pickup : MonoBehaviour
         if (rotate)
             transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime, Space.World);
 
-        if (flag && Input.GetKeyDown(KeyCode.O))
+        if (flag && Input.GetKeyDown(KeyCode.E))
         {
             AudioSource.PlayClipAtPoint(collectSound, transform.position);
             is_open = true;

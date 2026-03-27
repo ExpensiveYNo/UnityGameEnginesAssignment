@@ -43,7 +43,7 @@ public class Open_Close_Animation : MonoBehaviour
 
     void Update()
     {
-        if (mAnimator == null || !flag || !Input.GetKeyDown(KeyCode.O))
+        if (mAnimator == null || !flag || !Input.GetKeyDown(KeyCode.E))
             return;
 
         if (requiresKey && !is_unlocked)
