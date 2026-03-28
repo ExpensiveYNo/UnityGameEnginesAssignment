@@ -28,12 +28,14 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        if (isInvincible) return; // Ignore damage during i-frames
+        if (isInvincible) return;
 
         currentHealth = Mathf.Max(currentHealth - amount, 0);
 
         Debug.Log($"{gameObject.name} took {amount} damage. HP: {currentHealth}/{maxHealth}");
+
         onHit?.Invoke();
+        onHealthChanged?.Invoke(); // ✅ ADD THIS LINE
 
         if (currentHealth <= 0)
             Die();
@@ -50,9 +52,9 @@ public class Health : MonoBehaviour
 
     public void Heal(int amount)
     {
-        if (currentHealth <= 0) return; // Don't heal the dead
+        if (currentHealth <= 0) return;
 
-        currentHealth = Mathf.Min(currentHealth + amount, maxHealth); // Clamp to maxHealth
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         onHealthChanged?.Invoke();
 
         Debug.Log($"{gameObject.name} healed {amount} HP. HP: {currentHealth}/{maxHealth}");

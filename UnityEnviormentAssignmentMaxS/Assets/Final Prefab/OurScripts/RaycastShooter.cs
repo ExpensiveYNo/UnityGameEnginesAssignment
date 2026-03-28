@@ -25,7 +25,7 @@ public class RaycastShooter : MonoBehaviour
     [Header("References")]
     public Camera playerCamera;
 
-    private int currentAmmo;
+    public int currentAmmo;
     private float nextFireTime = 0f;
     private LineRenderer lineRenderer;
 
