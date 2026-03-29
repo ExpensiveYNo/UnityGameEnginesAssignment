@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 6226676728324933929}
   - component: {fileID: 4359263657909281091}
   - component: {fileID: -7510188857682237089}
+  - component: {fileID: 7585050147084029517}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -140,6 +141,18 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 7585050147084029517}
+        m_TargetAssemblyTypeName: EnemyDeathHandler, Assembly-CSharp
+        m_MethodName: PlayDeathAnimation
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 6226676728324933929}
         m_TargetAssemblyTypeName: LootDrop, Assembly-CSharp
         m_MethodName: Drop
@@ -283,6 +296,8 @@ MonoBehaviour:
     chance: 0.2
   - prefab: {fileID: 3497553152194850393, guid: dd5b992862e8bba4faba01893d3e178d, type: 3}
     chance: 0.2
+  - prefab: {fileID: 7135617792112562572, guid: 162a32f50e20262448adf32ddb1984e9, type: 3}
+    chance: 1
   dropHeightOffset: 0.5
 --- !u!114 &4359263657909281091
 MonoBehaviour:
@@ -306,11 +321,11 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6094909205863143164}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 71a21dcbb7af3db4c9baa1a30681c639, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 1
+  m_CullingMode: 0
+  m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -320,6 +335,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7585050147084029517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6094909205863143164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f65f003d303d64088bcf886ec4cd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyDeathAnimation
+  destroyDelay: 2
 --- !u!1 &7157857238349091038
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LevelManager : MonoBehaviour
 {
@@ -21,6 +22,14 @@ public class LevelManager : MonoBehaviour
         if (_ui != null)
             _ui.ToggleDeathPanel();
         // Freeze the game
+
+        StartCoroutine(FreezeAfterDelay(0.1f));
+    }
+
+    private IEnumerator FreezeAfterDelay(float delaySeconds)
+    {
+        // Use real time so the wait is not affected by Time.timeScale
+        yield return new WaitForSecondsRealtime(delaySeconds);
         Time.timeScale = 0f;
     }
 
@@ -35,6 +44,6 @@ public class LevelManager : MonoBehaviour
     {
         // Unfreeze before leaving
         Time.timeScale = 1f;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
