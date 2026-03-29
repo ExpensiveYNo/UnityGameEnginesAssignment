@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
 
@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
         Debug.Log($"{gameObject.name} took {amount} damage. HP: {currentHealth}/{maxHealth}");
 
         onHit?.Invoke();
-        onHealthChanged?.Invoke(); // ✅ ADD THIS LINE
+        onHealthChanged?.Invoke(); 
 
         if (currentHealth <= 0)
             Die();

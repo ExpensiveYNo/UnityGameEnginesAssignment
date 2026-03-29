@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4527504012890410697}
   - component: {fileID: 6226676728324933929}
   - component: {fileID: 4359263657909281091}
+  - component: {fileID: -7510188857682237089}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -34,14 +35,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6094909205863143164}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0006577487, w: 0.9999998}
   m_LocalPosition: {x: 836.9457, y: 86.43, z: 453.4852}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7420036979557629734}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.075}
 --- !u!33 &5546195939779536967
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -297,6 +298,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::hitFlash
   flashColor: {r: 1, g: 0, b: 0, a: 1}
   flashDuration: 0.1
+--- !u!95 &-7510188857682237089
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6094909205863143164}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 71a21dcbb7af3db4c9baa1a30681c639, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 1
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7157857238349091038
 GameObject:
   m_ObjectHideFlags: 0
