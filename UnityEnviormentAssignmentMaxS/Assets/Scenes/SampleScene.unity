@@ -2774,6 +2774,72 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 687dbafc2b84b2846b9a4a7a7dae2a7e, type: 3}
+--- !u!1 &970328610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 970328613}
+  - component: {fileID: 970328612}
+  - component: {fileID: 970328611}
+  m_Layer: 0
+  m_Name: killPlane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &970328611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970328610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfb1f47d175c9914dac8759e461423d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::KillPlane
+--- !u!65 &970328612
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970328610}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 129.91, y: 0, z: 129}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &970328613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 970328610}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 842.7, y: 74.82, z: 452.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &977208886
 GameObject:
   m_ObjectHideFlags: 0
@@ -3950,7 +4016,7 @@ MonoBehaviour:
   minSpawnInterval: 5
   maxSpawnInterval: 15
   spawnRadius: 55
-  navMeshSampleDistance: 5
+  navMeshSampleDistance: 10
   minSpawnDistanceFromPlayer: 10
   spawnCenter: {fileID: 1586276013}
   player: {fileID: 943170211}
@@ -4989,11 +5055,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CollectibleSpawner
   collectiblePrefabs:
   - {fileID: 3497553152194850393, guid: dd5b992862e8bba4faba01893d3e178d, type: 3}
-  maxCollectiblesAtOnce: 20
-  minSpawnInterval: 15
+  - {fileID: 3913570990901684262, guid: 19850037c917a1c48ad9916b5cbff60d, type: 3}
+  maxCollectiblesAtOnce: 30
+  minSpawnInterval: 10
   maxSpawnInterval: 15
   spawnRadius: 55
-  navMeshSampleDistance: 5
+  navMeshSampleDistance: 10
   spawnHeightOffset: 0.7
   spawnCenter: {fileID: 0}
 --- !u!4 &1868021368
@@ -6054,3 +6121,4 @@ SceneRoots:
   - {fileID: 1508161698}
   - {fileID: 1878361649}
   - {fileID: 1964442237}
+  - {fileID: 970328613}
