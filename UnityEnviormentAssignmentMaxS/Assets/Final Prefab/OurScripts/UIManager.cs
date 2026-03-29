@@ -6,7 +6,7 @@ public class UIManager : MonoBehaviour
 
     public void ToggleDeathPanel()
     {
-        deathPanel.SetActive(!deathPanel.activeSelf);
+        deathPanel.SetActive(true);
     }
 
     // Wire these up to your Respawn and Main Menu buttons in the Inspector

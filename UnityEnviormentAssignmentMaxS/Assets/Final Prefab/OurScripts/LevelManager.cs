@@ -14,14 +14,11 @@ public class LevelManager : MonoBehaviour
 
     public void GameOver()
     {
-        // Unlock and show the cursor so the user can click buttons
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-
         UIManager _ui = GetComponent<UIManager>();
         if (_ui != null)
             _ui.ToggleDeathPanel();
-        // Freeze the game
 
         StartCoroutine(FreezeAfterDelay(0.1f));
     }
